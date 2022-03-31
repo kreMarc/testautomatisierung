@@ -1,27 +1,23 @@
 package com.basys.automatedtesting.officeafternoon.selenium;
 
-import static com.codeborne.selenide.Selectors.byId;
-import static com.codeborne.selenide.Selectors.byTitle;
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
-import com.basys.automatedtesting.officeafternoon.BaseSelenideTest;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
+import com.basys.automatedtesting.officeafternoon.BaseSeleniumTest;
 
 /**
  * 
- * @author marce
+ * @author marcel
  *
  */
-public class GoogleSelenideTest extends BaseSelenideTest {
+public class GoogleSeleniumTest extends BaseSeleniumTest {
 
 	@Test
-	public void OA_T1_testGoogle() {
-		
-		
+	public void testGoogle() throws InterruptedException {
+
 		// accept popup
 		driver.findElement(By.xpath("//*[@id='L2AGLb']")).click();
 

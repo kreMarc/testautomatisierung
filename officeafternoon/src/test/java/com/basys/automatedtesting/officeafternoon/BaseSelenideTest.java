@@ -16,8 +16,8 @@ public class BaseSelenideTest {
 		System.setProperty("webdriver.gecko.driver", "C:\\Entwicklung\\eclipse\\webdrivers\\geckodriver.exe");
 		Configuration.browser = "FIREFOX";
 
-//		Configuration.timeout = 5000;
-//		Configuration.pollingInterval = 500;
+//		Configuration.timeout = 10000;
+//		Configuration.pollingInterval = 300;
 		open("https://www.google.de");
 		WebDriverRunner.getWebDriver().manage().window().maximize();
 

@@ -1,22 +1,25 @@
 package com.basys.automatedtesting.officeafternoon.selenide;
 
-import static org.junit.Assert.assertEquals;
+import static com.codeborne.selenide.Selectors.byId;
+import static com.codeborne.selenide.Selectors.byTitle;
+import static com.codeborne.selenide.Selectors.byXpath;
+import static com.codeborne.selenide.Selenide.$;
 
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
-import com.basys.automatedtesting.officeafternoon.BaseSeleniumTest;
+import com.basys.automatedtesting.officeafternoon.BaseSelenideTest;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 
 /**
  * 
- * @author marcel
+ * @author marce
  *
  */
-public class GoogleSeleniumTest extends BaseSeleniumTest {
+public class GoogleSelenideTest extends BaseSelenideTest {
 
 	@Test
-	public void testGoogle() throws InterruptedException {
+	public void OA_T1_testGoogle() {
 
 		/**
 		 * Step 1 - Accecpt popup
