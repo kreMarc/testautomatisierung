@@ -1,9 +1,8 @@
-pipeline { 
-    agent any  
-    stages { 
-        stage('Build') { 
-            steps { 
-               echo 'This is a minimal pipeline.' 
+pipeline {
+    stages {
+        stage ('Build') {
+            steps {
+                sh "./mvnw clean install"
             }
         }
     }
