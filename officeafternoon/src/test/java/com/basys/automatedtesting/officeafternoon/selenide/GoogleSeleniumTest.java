@@ -18,23 +18,29 @@ public class GoogleSeleniumTest extends BaseSeleniumTest {
 	@Test
 	public void testGoogle() throws InterruptedException {
 
-		// accept popup
-		driver.findElement(By.xpath("//*[@id='L2AGLb']")).click();
+		/**
+		 * Step 1 - Accecpt popup
+		 */
+		// Accept popup
+		$(byId("L2AGLb")).click();
 
-		Thread.sleep(2000);
+		/**
+		 * Step 2 - Set Value in search input field
+		 */
+		SelenideElement sucheInput = $(byTitle("Suche"));
+		sucheInput.setValue("develop group");
 
-		WebElement sucheInput = driver.findElement(By.xpath("//input[@title = 'Suche']"));
-		sucheInput.sendKeys("develop group");
-
-		Thread.sleep(2000);
-
-		WebElement ersterEintragHeading = driver.findElement(By.xpath(
+		SelenideElement ersterEintrag = $(byXpath(
 				"/html/body/div[1]/div[3]/form/div[1]/div[1]/div[2]/div[2]/div[2]/ul[1]/div/ul/li[1]/div/div[2]/div[1]/span"));
 
-		Thread.sleep(2000);
+		ersterEintrag.shouldBe(Condition.exist);
+		ersterEintrag.shouldBe(Condition.text("develop group Holding AG"));
 
-		String text = ersterEintragHeading.getText();
-		assertEquals("develop group Holding AG", text);
+		/**
+		 * Step 3 - Select first entry of dropdown
+		 */
+		ersterEintrag.click();
+		$(byXpath("//div[@class = 'hdtb-mitem hdtb-msel']")).shouldBe(Condition.text("Alle"));
 
 	}
 
