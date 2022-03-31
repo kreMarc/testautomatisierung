@@ -1,0 +1,5 @@
+com\basys\automatedtesting\officeafternoon\BaseSeleniumTest.class
+com\basys\automatedtesting\officeafternoon\BaseSelenideTest.class
+com\basys\automatedtesting\officeafternoon\selenium\GoogleSelenideTest.class
+com\basys\automatedtesting\officeafternoon\selenide\GoogleSeleniumTest.class
+com\basys\automatedtesting\officeafternoon\pageobjects\GooglePO.class
